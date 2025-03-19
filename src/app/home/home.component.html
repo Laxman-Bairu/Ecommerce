@@ -1,0 +1,37 @@
+<div class="row p-0 m-0 min-vh-100">
+    <div class="col">
+        <app-header ></app-header>
+        <div class="container-fluid">
+            <div class="row m-0 p-0 mt-xxl-5 align-items-center justify-content-center">
+                <div class="col text-center">
+                    <h2 class="text-primary fw-bold">Welcome to New Official Website!</h2>
+                    <h3>this is web is for sample test</h3>
+                <app-search></app-search>
+                </div>
+            </div>
+            <div class="row justify-content-center my-3">
+                <div class="col-4">
+                    <button class="btn btn-primary w-100" (click)="NextClick()">GetUsers</button>
+                </div>
+                <table class="table table-bordered my-2 mx-2" *ngIf="getUserList">
+                    <thead>
+                        <tr>
+                            <td>S.no</td>
+                            <td>Name</td>
+                            <td>age</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of getUserList">
+                            <td>{{item.id}}</td>
+                            <td>{{item.name}}</td>
+                            <td>{{item.age}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+            </div>
+        </div>
+    </div>
+    <app-footer class="mt-auto p-0"></app-footer>
+</div>
